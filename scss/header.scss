@@ -41,7 +41,9 @@ body {
             font-size: 1em;
             text-align: center;
             display: block;
-
+            &:hover .sub_lista {
+                display: block;
+            }
             a {
                 text-decoration: none;
                 color: black;
@@ -55,6 +57,9 @@ body {
                 a {
                     color: black;
                     text-decoration: none;
+                }
+                &:hover a {
+                    color: rgb(179, 100, 100);
                 }
             }
 

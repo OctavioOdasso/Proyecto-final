@@ -29,6 +29,8 @@ body {
       font-size: 1em;
       text-align: center;
       display: block; }
+      .head .lista li:hover .sub_lista {
+        display: block; }
       .head .lista li a {
         text-decoration: none;
         color: black;
@@ -38,6 +40,8 @@ body {
         .head .lista li .sub_lista a {
           color: black;
           text-decoration: none; }
+        .head .lista li .sub_lista:hover a {
+          color: #b36464; }
     .head .lista:hover a {
       color: #b36464; }
     .head .lista:hover li {
@@ -123,7 +127,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif; }
     #foot .foot2 .btn--facebook {
       background-color: #3a5795; }
-    #foot .foot2 .btn--send-email {
+    #foot .foot2 .btn--Inicio {
       background-color: #c25e30; }
     #foot .foot2 .btn--instagram {
       background-color: #b8566e; }
