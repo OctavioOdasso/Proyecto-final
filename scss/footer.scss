@@ -1,0 +1,46 @@
+#foot {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid black;
+    .foot1 {
+        grid-template-rows: 1fr;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foot2 {
+        grid-template-rows: 1;
+        text-align: center;
+        font-size: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+        $redes: (
+            facebook: #3a5795,
+            send-email: #c25e30,
+            instagram: #b8566e,
+        );
+
+        @each $red, $color in $redes {
+          .btn--#{$red}{
+            background-color: $color;
+          } 
+        }
+        
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #foot {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .foot1 {
+            grid-area: 1fr;
+        }
+
+        .foot2 {
+            grid-area: 1fr;
+        }
+    }
+}

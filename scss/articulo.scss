@@ -1,0 +1,105 @@
+@mixin base {
+    display: grid;
+    grid-area: 2fr;
+}
+
+@mixin h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+@mixin p {
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+}
+
+@mixin img {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin sub_box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.art_a {
+    display: grid;
+    grid-area: 
+    "foto_a"
+    "box_a_1"
+    "foto_b"
+    "box_b_1";
+    grid-template-rows: 1fr;
+    margin: 1.5em;
+    
+    .foto_a {
+        display: grid;
+        grid-area: "foto_box_a";
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box_a_1 {
+        display: grid;
+        grid-area: "box_a_1";
+        .sub_box_a_1 {
+            @include sub_box;
+            h2 {
+                @include h2;
+            }
+            p {
+                @include p
+            }
+        }    
+    }
+    .foto_b {
+        display: grid;
+        grid-area: "foto_box_b";
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box_b_1 {
+        display: grid;
+        grid-area: "box_b_1";
+        .sub_box_b_1 {
+            @include sub_box;
+            h2 {
+                @include h2;
+            }
+            p {
+                @include p;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .art_a {
+        display: grid;
+        grid-area: 
+        "foto_a box_a"
+        "foto_b box_b";
+        grid-template-columns: 1fr 1fr;
+        .foto_a {
+            display: grid;
+            grid-area: "foto_a";
+        }
+        .box_a_1 {
+            display: grid;
+            grid-area: "box_a";
+        }
+        .foto_b {
+            display: grid;
+            grid-area: "foto_b";
+        }
+        .box_b_1 {
+            display: grid;
+            grid-area: "box_b";
+        }
+    }
+
+    
+}
