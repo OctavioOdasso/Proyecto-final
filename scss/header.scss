@@ -12,8 +12,7 @@ body {
 .head {
     background-color: $color_principal;
     display: grid;
-    grid-auto-rows: 10rem;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-rows: 1fr;
     border: 1px solid black;
 
     .logo {
@@ -21,10 +20,13 @@ body {
         margin-right: auto;
         display: block;
         position: relative;
+        grid-area: 1fr;
         
     }
 
     .titulo {
+        display: grid;
+        grid-area: 1fr;
         font-size: 1.5em;
         text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -35,7 +37,8 @@ body {
 
     .lista {
         padding-top: .4em;
-
+        display: grid;
+        grid-area: 1fr;
         li {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1em;
@@ -75,4 +78,21 @@ body {
 
     }
 
+}
+
+@media screen and (min-width:1024px) {
+    .head {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 8em;
+        .lista {
+            grid-area: 1fr;
+        }
+        .logo {
+            grid-area: 1fr;
+        }
+        .titulo {
+            grid-area: 1fr;
+        }
+    }
 }

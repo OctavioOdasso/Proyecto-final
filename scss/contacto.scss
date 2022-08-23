@@ -1,0 +1,46 @@
+$color_principal: azure;
+$color_base: #333;
+#section {
+    background-color: $color_principal;
+    margin-top: 12px;
+    height: 700px;
+    div {
+        position: relative;
+        margin: 0 auto;
+        .titulo__2 {
+            font-size: 35px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 100px;
+        }
+        form {
+            margin: 0 auto;
+            padding: 10px;
+            width: 300px;
+            background-color: $color_base;
+            color: #ddd;
+            input, textarea {
+                border: 0;
+                outline: none;
+                width: 250px;
+            }
+            .formulario {
+                border: solid 1px $color_base;
+                padding: 12px;
+            }
+            & > p {
+                text-align: center;
+            }
+            &:focus {
+                border-color: $color_principal;
+            }
+            .center__content {
+                text-align: center;
+            }
+            .btn {
+                background-color: $color_principal;
+                border: #ddd 2px solid;
+            }
+        }
+    }
+}
