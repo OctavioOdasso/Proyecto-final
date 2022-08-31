@@ -2,11 +2,13 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     border: 1px solid black;
+    height: 150px;
     .foot1 {
         grid-template-rows: 1fr;
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 2em;
     }
 
     .foot2 {
@@ -14,11 +16,15 @@
         text-align: center;
         font-size: 30px;
         font-family: Georgia, 'Times New Roman', Times, serif;
-
+        margin-top: 1em;
+        a {
+            text-decoration: none;
+            color: black;
+        }
         $redes: (
-            facebook: #3a5795,
-            Inicio: #c25e30,
-            instagram: #b8566e,
+            facebook: rgb(105, 82, 82),
+            Inicio: rgb(105, 82, 82),
+            instagram: rgb(105, 82, 82),
         );
 
         @each $red, $color in $redes {
@@ -29,6 +35,8 @@
         
     }
 }
+
+@keyframes title {}
 
 @media screen and (min-width: 1024px) {
     #foot {
