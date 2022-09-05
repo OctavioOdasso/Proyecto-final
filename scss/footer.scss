@@ -3,6 +3,7 @@
     grid-template-rows: 1fr 1fr;
     border: 1px solid black;
     height: 150px;
+    margin-top: 3em;
     .foot1 {
         grid-template-rows: 1fr;
         display: block;
@@ -38,10 +39,20 @@
 
 @keyframes title {}
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width:701px) and (max-width:870px) {
+     #foot {margin-top: 45em;}   
+}
+
+
+@media screen and (max-width: 700px) {
+    #foot {margin-top: 10em;}        
+}
+
+@media screen and (min-width: 871px) {
     #foot {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-top: 15em;
 
         .foot1 {
             grid-area: 1fr;

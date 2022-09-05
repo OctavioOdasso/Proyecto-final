@@ -1,0 +1,408 @@
+@mixin base {
+    display: grid;
+    grid-area: 2fr;
+}
+
+@mixin cards {
+    border: 1px solid black;
+    background-color: beige;
+    box-shadow: #444 -10px 5px 10px 0px;
+    width: 20rem;
+    height: 27rem;
+    margin-top: 4em;
+}
+
+@mixin h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+@mixin h4 {
+    text-align: center;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 3em;
+
+}
+
+@mixin p {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+}
+
+
+@mixin img {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    height: 14em;
+
+}
+
+@mixin sub_box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+
+/*PAGINA INICIO*/
+.art_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2em;
+
+    .sub_art_1 {
+        display: grid;
+        grid-area: 1fr;
+        justify-items: center;
+
+        .intro {
+            width: 35em;
+
+            .intro_picture {
+                img {
+                    @include img;
+                }
+            }
+
+            .intro_text {
+                margin-top: 2em;
+                text-align: center;
+
+                h3 {
+                    font-size: 35px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                }
+
+                p {
+                    font-size: 25px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
+}
+
+.art_2 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .sub_art_2 {
+        display: grid;
+        grid-area: 1fr;
+
+        .cards {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 4em;
+
+            .card_1 {
+                @include cards;
+                transition: 1s;
+
+                img {
+                    @include img;
+                    margin-top: .5em;
+                    width: 19em;
+                }
+
+                .card_text {
+                    margin-top: 2em;
+
+                    h4 {
+                        @include h4;
+                        transition: 1s;
+                    }
+
+                    p {
+                        @include p;
+                        display: none;
+                        padding-top: 1rem;
+                        transition: 1s;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        display: none;
+                        text-align: center;
+                        margin-top: .5rem;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-size: 22px;
+                        transition: 1s;
+                    }
+                }
+
+                &:hover {
+                    background-color: blueviolet;
+                    width: 22em;
+                }
+
+                &:hover p {
+                    display: block;
+                }
+
+                &:hover a {
+                    display: block;
+                }
+            }
+
+            .card_2 {
+                @include cards;
+                transition: 1s;
+
+                img {
+                    @include img;
+                    margin-top: .5em;
+                    width: 19em;
+                }
+
+                .card_text {
+                    margin-top: 2em;
+
+                    h4 {
+                        @include h4;
+                        transition: 1s;
+                    }
+
+                    p {
+                        @include p;
+                        display: none;
+                        padding-top: 1rem;
+                        transition: 1s;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        display: none;
+                        text-align: center;
+                        margin-top: .5rem;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-size: 22px;
+                        transition: 1s;
+                    }
+                }
+
+                &:hover {
+                    background-color: blueviolet;
+                    width: 22em;
+                }
+
+                &:hover p {
+                    display: block;
+                }
+
+                &:hover a {
+                    display: block;
+                }
+            }
+
+            .card_3 {
+                @include cards;
+                transition: 1s;
+
+                img {
+                    @include img;
+                    margin-top: .5em;
+                    width: 19em;
+
+                }
+
+                .card_text {
+                    margin-top: 2em;
+
+                    h4 {
+                        @include h4;
+                    }
+
+                    p {
+                        @include p;
+                        display: none;
+                        padding-top: 1rem;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        display: none;
+                        text-align: center;
+                        margin-top: .5rem;
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        font-size: 22px;
+                        transition: 1s;
+                    }
+                }
+
+                &:hover {
+                    background-color: blueviolet;
+                    width: 22em;
+                }
+
+                &:hover p {
+                    display: block;
+                }
+
+                &:hover a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:700px) {
+    .art_1 {
+        .sub_art_1 {
+            .intro {
+                width: 40em;
+            }
+        }
+    }
+
+    .art_2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 2em;
+        height: 25em;
+
+        .sub_art_2 {
+            display: grid;
+            grid-area: 1fr;
+
+            .cards {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .card_1 {
+                    width: 18em;
+
+                    img {
+                        width: 17em;
+                    }
+
+                    &:hover {
+                        width: 20em;
+                    }
+                }
+
+                .card_2 {
+                    width: 18em;
+
+                    img {
+                        width: 17em;
+                    }
+
+                    &:hover {
+                        width: 20em;
+                    }
+                }
+
+                .card_3 {
+                    width: 18em;
+
+                    img {
+                        width: 17em;
+                    }
+
+                    &:hover {
+                        width: 20em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 970px) {
+    .art_1 {
+        .sub_art_1 {
+            .intro {
+                width: 69.4em;
+            }
+        }
+    }
+
+    .art_2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 2em;
+        height: 25em;
+
+        .sub_art_2 {
+            display: grid;
+            grid-area: 1fr;
+
+            .cards {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+
+                .card_1 {
+                    &:hover {
+                        background-color: blueviolet;
+                        height: 23em;
+                    }
+
+                    &:hover p {
+                        display: block;
+                    }
+
+                    &:hover a {
+                        display: block;
+                    }
+                    &:hover h4 {
+                        margin-top: 1em;
+                    }
+                }
+
+                .card_2 {
+                    &:hover {
+                        background-color: blueviolet;
+                        height: 23rem;
+                    }
+
+                    &:hover p {
+                        display: block;
+                    }
+
+                    &:hover a {
+                        display: block;
+                    }
+                    &:hover h4 {
+                        margin-top: 1em;
+                    }
+                }
+
+                .card_3 {
+                    &:hover {
+                        background-color: blueviolet;
+                        height: 23rem;
+                    }
+
+                    &:hover p {
+                        display: block;
+                    }
+
+                    &:hover a {
+                        display: block;
+                    }
+                    &:hover h4 {
+                        margin-top: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*FIN PAGINA INICIO*/
