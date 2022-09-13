@@ -9,7 +9,7 @@
 }
 
 @mixin p {
-    text-align: justify;
+    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 22px;
 }
@@ -78,7 +78,7 @@
     }
 }
 
-@media screen and (min-width: 9070px) {
+@media screen and (min-width: 1020px) {
     .art_a {
         display: grid;
         grid-area: 

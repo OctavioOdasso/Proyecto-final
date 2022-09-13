@@ -9,7 +9,11 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 2em;
+        
+        img {
+            max-width: 150px;
+            max-height: 150px;
+        }
     }
 
     .foot2 {
@@ -21,17 +25,6 @@
         a {
             text-decoration: none;
             color: black;
-        }
-        $redes: (
-            facebook: rgb(105, 82, 82),
-            Inicio: rgb(105, 82, 82),
-            instagram: rgb(105, 82, 82),
-        );
-
-        @each $red, $color in $redes {
-          .btn--#{$red}{
-            background-color: $color;
-          } 
         }
         
     }

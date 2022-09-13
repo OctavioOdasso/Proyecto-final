@@ -90,11 +90,12 @@
 .art_2 {
     display: grid;
     grid-template-columns: 1fr;
-
+    background-color: rgb(230, 230, 230);
+    
     .sub_art_2 {
         display: grid;
         grid-area: 1fr;
-
+        background-color: rgb(230, 230, 230);
         .cards {
             display: flex;
             align-items: center;
